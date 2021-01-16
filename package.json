@@ -4,7 +4,8 @@
   "description": "web programming 2020 final project",
   "main": "server.js",
   "scripts": {
-	  "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "start": "cd frontend && yarn start"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,9 @@
   },
   "homepage": "https://github.com/easonyu0203/the-sexiest#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
