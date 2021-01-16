@@ -10,6 +10,17 @@ this website ideal is inspired by the movie Social Network the scene when Mark Z
 * framework: React-Express
 * data collection: web crawling from instagram for photo and basic intro of the celebrity
 
+## Available Scripts
+```
+yarn start
+```
+Runs frontend react app in the development mode.
+```
+yarn server
+```
+Runs backend server in development mode.
+
+
 ## web page design detail
 ### Home page
 when user first go to this site. we first intro about the site and instruct them how to play.(the instruction should be simple)
