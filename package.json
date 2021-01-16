@@ -1,0 +1,19 @@
+{
+  "name": "the_sexiest",
+  "version": "1.0.0",
+  "description": "web programming 2020 final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easonyu0203/the-sexiest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easonyu0203/the-sexiest/issues"
+  },
+  "homepage": "https://github.com/easonyu0203/the-sexiest#readme"
+}
