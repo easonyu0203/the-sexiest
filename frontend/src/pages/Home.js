@@ -16,7 +16,7 @@ export default function Home() {
             buttonSize='btn--large'
             value='play'
           >
-            GET STARTED
+            PLAY
           </Button>
           <Button
             className='btns'
