@@ -44,6 +44,7 @@ img {
 .card-text .name {
   color: black;
   font-size: 20px;
+  margin-top: 0px;
 }
 
 .card-text .title {

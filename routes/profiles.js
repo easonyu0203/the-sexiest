@@ -14,6 +14,7 @@ router.get("/resetCnt", async (req, res) => {
   for (let i = 0; i < profiles.length; i++) {
     profiles[i]["showCnt"] = 0;
     profiles[i]["clickCnt"] = 0;
+    profiles[i]["rate"] = 0;
     ps.push(await profiles[i].save());
   }
   const arr = await Promise.all(ps);
@@ -23,6 +24,13 @@ router.get("/resetCnt", async (req, res) => {
 router.get("/:name", async (req, res) => {
   const profile = await Profile.findOne({ name: req.params.name });
   res.json(profile);
+});
+
+router.get("/top/:count", async (req, res) => {
+  const profiles = await Profile.find()
+    .sort({ rate: -1 })
+    .limit(Number(req.params.count));
+  res.json(profiles);
 });
 
 router.get("/random/:count", async (req, res) => {
@@ -94,6 +102,9 @@ router.patch("/:name", async (req, res) => {
   }
   if (req.body.clickCnt) {
     update["clickCnt"] = req.body.clickCnt + t["clickCnt"];
+  }
+  if (req.body.showCnt || req.body.clickCnt) {
+    update["rate"] = update["clickCnt"] / update["showCnt"];
   }
   try {
     const updatedProfile = await Profile.updateOne(

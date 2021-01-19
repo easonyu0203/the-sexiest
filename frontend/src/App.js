@@ -8,9 +8,9 @@ import Tutorial from "./pages/Tutorial";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
+import Result from "./pages/Result";
 
 function App() {
-  const [round, setRound] = useState(1);
   return (
     <div className="App">
       <Router>
@@ -20,6 +20,7 @@ function App() {
           <Route path="/play" component={Play} />
           <Route path="/tutorial" component={Tutorial} />
           <Route path="/about" component={About} />
+          <Route path="/result" component={Result} />
         </Switch>
         <Footer />
       </Router>

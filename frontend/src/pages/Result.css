@@ -1,0 +1,33 @@
+.result-container {
+  background-image: url("../images/background.jpg");
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template: "show list" / 60% 40%;
+}
+.title-text {
+  position: relative;
+  top: -5%;
+}
+.rank-list {
+  grid-area: "list";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+.show-profile {
+  grid-area: "show";
+  /* width: 100vw; */
+  /* height: 74vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: initial;
+}
+
+.show-profile img {
+  border-radius: 15px;
+}

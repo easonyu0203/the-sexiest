@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import { Redirect } from "react-router";
 
 import "./Play.css";
 
@@ -11,6 +12,7 @@ export default function Play() {
   const profiles = useRef([]);
   const [displayed_profiles, setDisplayed_profiles] = useState([]);
   const [round, setRound] = useState(1);
+  const [end, setEnd] = useState(false);
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/profile/random/11").then((res) => {
@@ -64,6 +66,7 @@ export default function Play() {
       }
       Promise.all(ps).then(() => {
         console.log("game over, data have been collect to the server");
+        setEnd(true);
       });
       //   laoding to result page animation...
     }
@@ -72,24 +75,30 @@ export default function Play() {
 
   return (
     <>
-      <div className="container">
-        <div className="game-title">Who is Sexier</div>
-        <div className="card-container">
-          {displayed_profiles.map((p, index) => (
-            <Card
-              key={index}
-              name={p.name}
-              title={p.title}
-              intro={p.intro}
-              picture={p.pictures[0]}
-              ig_followers={p.ig_followers}
-              ig_link={p.ig_link}
-              onClick={nextRound}
-            />
-          ))}
-        </div>
-        <ProgressBar round={round - 1} />
-      </div>
+      {end ? (
+        <Redirect to="/result" />
+      ) : (
+        <>
+          <div className="container">
+            <div className="game-title">Who is Sexier</div>
+            <div className="card-container">
+              {displayed_profiles.map((p, index) => (
+                <Card
+                  key={index}
+                  name={p.name}
+                  title={p.title}
+                  intro={p.intro}
+                  picture={p.pictures[0]}
+                  ig_followers={p.ig_followers}
+                  ig_link={p.ig_link}
+                  onClick={nextRound}
+                />
+              ))}
+            </div>
+            <ProgressBar round={round - 1} />
+          </div>
+        </>
+      )}
     </>
   );
 }
