@@ -20,8 +20,8 @@ function App() {
           <Route path="/tutorial" component={Tutorial} />
           <Route path="/about" component={About} />
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
