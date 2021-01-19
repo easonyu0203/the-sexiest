@@ -1,7 +1,7 @@
 .card {
   display: grid;
   grid-template:
-    "image image" 400px
+    "image image" 350px
     "text stats" 120px / 300px 100px;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -14,6 +14,8 @@
   transition: 0.2s ease;
   cursor: pointer;
   margin: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .card:hover {

@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Play.css";
 
 import Card from "../components/Card";
+import ProgressBar from "../components/ProgressBar";
 
 export default function Play() {
   const profiles = useRef([]);
@@ -42,6 +43,7 @@ export default function Play() {
   return (
     <>
       <div className="container">
+        <div className="game-title">Who is Sexier</div>
         <div className="card-container">
           {displayed_profiles.map((p, index) => (
             <Card
@@ -56,6 +58,7 @@ export default function Play() {
             />
           ))}
         </div>
+        <ProgressBar />
       </div>
     </>
   );

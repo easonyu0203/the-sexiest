@@ -1,12 +1,24 @@
 .container {
   background: url("../images/background.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-container {
   width: 100vw;
-  height: 100vh;
+  height: 71vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: initial;
+}
+
+.game-title {
+  display: block;
+  padding-top: 20px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
 }
