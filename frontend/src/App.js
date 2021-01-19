@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About";
 
 function App() {
+  const [round, setRound] = useState(1);
   return (
     <div className="App">
       <Router>

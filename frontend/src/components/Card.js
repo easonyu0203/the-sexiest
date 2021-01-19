@@ -2,11 +2,11 @@ import React from "react";
 import "./Card.css";
 
 export default function Card(props) {
-  const { name, title, intro, ig_link, ig_followers, picture } = props;
+  const { name, title, intro, ig_link, ig_followers, picture, onClick } = props;
   return (
     <>
       <div className="card">
-        <div className="card-image">
+        <div onClick={() => onClick(name)} className="card-image">
           <img src={picture} alt=""></img>
         </div>
         <div className="card-text">
@@ -28,7 +28,7 @@ export default function Card(props) {
             </>
           ) : (
             <>
-              <i class="fab fa-instagram fa-3x"></i>
+              <i className="fab fa-instagram fa-3x"></i>
               <div>no official account</div>
             </>
           )}
