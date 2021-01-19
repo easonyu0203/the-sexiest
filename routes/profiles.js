@@ -8,6 +8,18 @@ router.get("/", async (req, res) => {
   res.json(profiles);
 });
 
+router.get("/resetCnt", async (req, res) => {
+  const profiles = await Profile.find();
+  const ps = [];
+  for (let i = 0; i < profiles.length; i++) {
+    profiles[i]["showCnt"] = 0;
+    profiles[i]["clickCnt"] = 0;
+    ps.push(await profiles[i].save());
+  }
+  const arr = await Promise.all(ps);
+  res.json(arr);
+});
+
 router.get("/:name", async (req, res) => {
   const profile = await Profile.findOne({ name: req.params.name });
   res.json(profile);
@@ -58,6 +70,7 @@ router.post("/", async (req, res) => {
 
 router.patch("/:name", async (req, res) => {
   const update = {};
+  const t = await Profile.findOne({ name: req.params.name });
   if (req.body.name) {
     update["name"] = req.body.name;
   }
@@ -75,6 +88,12 @@ router.patch("/:name", async (req, res) => {
   }
   if (req.body.pictures) {
     update["pictures"] = req.body.pictures;
+  }
+  if (req.body.showCnt) {
+    update["showCnt"] = req.body.showCnt + t["showCnt"];
+  }
+  if (req.body.clickCnt) {
+    update["clickCnt"] = req.body.clickCnt + t["clickCnt"];
   }
   try {
     const updatedProfile = await Profile.updateOne(

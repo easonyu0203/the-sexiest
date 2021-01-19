@@ -10,6 +10,14 @@ const ProfileSchema = mongoose.Schema({
   ig_followers: String,
   ig_link: String,
   pictures: [String],
+  clickCnt: {
+    type: Number,
+    default: 0,
+  },
+  showCnt: {
+    type: Number,
+    default: 0,
+  },
 });
 
 module.exports = mongoose.model("Profiles", ProfileSchema);
