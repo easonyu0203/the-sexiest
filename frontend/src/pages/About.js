@@ -28,9 +28,9 @@ export default function About() {
           </div>
         </div>
         <div className="continue-btn">
-          <Link to="/tutorial">
+          <a href="#tutorial">
             <div>Continue</div>
-          </Link>
+          </a>
         </div>
       </section>
     </>

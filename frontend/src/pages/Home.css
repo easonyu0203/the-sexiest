@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 header {
@@ -43,7 +40,7 @@ header .logo {
   cursor: pointer;
 }
 .showcase {
-  position: absolute;
+  position: relative;
   right: 0;
   width: 100%;
   min-height: 100vh;
@@ -53,7 +50,7 @@ header .logo {
   align-items: center;
   background: #111;
   transition: 0.5s;
-  z-index: 2;
+  z-index: 11;
 }
 .showcase.active {
   right: 300px;
@@ -79,7 +76,7 @@ header .logo {
 }
 .text {
   position: relative;
-  z-index: 10;
+  z-index: 11;
 }
 
 .text h2 {
@@ -140,7 +137,7 @@ header .logo {
 }
 .social {
   position: absolute;
-  z-index: 10;
+  z-index: 11;
   bottom: 20px;
   display: flex;
   justify-content: center;

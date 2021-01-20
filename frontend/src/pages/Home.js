@@ -33,9 +33,9 @@ export default function Home() {
           <Link to="/play">
             <div className="home-start-btn">start</div>
           </Link>
-          <Link to="/about">
+          <a href="#about">
             <div className="home-guide-btn">guide</div>
-          </Link>
+          </a>
         </div>
         <ul className="social">
           <li>

@@ -4,7 +4,6 @@ import "./ExampleCard.css";
 export default function ExampleCard({ num, onClick }) {
   const [img_url, setImg_url] = useState("");
   useEffect(() => {
-    console.log(num);
     if (num != 1) {
       setImg_url(
         "https://scontent-hkg4-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/123658981_856861958382508_2333833865310086567_n.jpg?_nc_ht=scontent-hkg4-2.cdninstagram.com&_nc_cat=104&_nc_ohc=lXOdlzupgh0AX8Bsejj&tp=1&oh=f53b8efaf1bcb6c66eda2ab8a88848ed&oe=60310086"

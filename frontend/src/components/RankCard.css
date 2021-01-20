@@ -39,7 +39,7 @@
   padding-left: 0px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .rank-number {
