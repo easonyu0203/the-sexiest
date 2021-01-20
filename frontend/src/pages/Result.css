@@ -5,17 +5,6 @@
   display: grid;
   grid-template: "show list" / 60% 40%;
 }
-.title-text {
-  position: relative;
-  top: -5%;
-}
-.rank-list {
-  grid-area: "list";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: scroll;
-}
 
 .show-profile {
   grid-area: "show";
@@ -26,6 +15,17 @@
   align-items: center;
   justify-content: center;
   overflow: initial;
+}
+.title-text {
+  position: relative;
+  top: -5%;
+}
+.rank-list {
+  grid-area: "list";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
 }
 
 .show-profile img {

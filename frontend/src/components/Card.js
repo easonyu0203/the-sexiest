@@ -32,7 +32,7 @@ export default function Card(props) {
           ) : (
             <>
               <i className="fab fa-instagram fa-3x"></i>
-              <div>no official account</div>
+              <div className="no-account-text">no official account</div>
             </>
           )}
         </div>

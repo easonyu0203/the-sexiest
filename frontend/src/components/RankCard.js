@@ -1,8 +1,14 @@
 import React from "react";
 import "./RankCard.css";
 
+function score(rate) {
+  const tmp = (1 - rate) * 100;
+  rate = 100 - tmp / 2 + Math.sqrt(tmp);
+  return Math.floor(rate);
+}
+
 export default ({ rank, rate, name, title, img_url, onClick }) => {
-  rate = Math.floor(rate * 100);
+  rate = score(rate);
   return (
     <>
       <div onClick={() => onClick(rank - 1)} className="rank-card-container">
