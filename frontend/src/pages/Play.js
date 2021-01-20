@@ -79,7 +79,7 @@ export default function Play() {
         <Redirect to="/result" />
       ) : (
         <>
-          <div className="container">
+          <section className="container">
             <div className="game-title">Who is Sexier</div>
             <div className="card-container">
               {displayed_profiles.map((p, index) => (
@@ -96,7 +96,7 @@ export default function Play() {
               ))}
             </div>
             <ProgressBar round={round - 1} />
-          </div>
+          </section>
         </>
       )}
     </>

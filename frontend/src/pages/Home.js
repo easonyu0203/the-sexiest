@@ -27,11 +27,14 @@ export default function Home() {
         ></video>
         <div className="overlay"></div>
         <div className="text">
-          <h3>Find your</h3>
-          <h2>celebrity crush</h2>
+          <h2>Find your</h2>
+          <h3>celebrity crush</h3>
           <p>A mini game for you to find your type </p>
-          <Link to="play">
-            <div>start</div>
+          <Link to="/play">
+            <div className="home-start-btn">start</div>
+          </Link>
+          <Link to="/about">
+            <div className="home-guide-btn">guide</div>
           </Link>
         </div>
         <ul className="social">
