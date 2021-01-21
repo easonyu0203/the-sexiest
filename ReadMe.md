@@ -22,9 +22,9 @@ yarn server
 Runs backend server in development mode.
 
 ## 組員貢獻:
-* 葉小漓 :前端
-* 游淯聖 :前端 ,後端 , database(MongoDB)
-* 楊鈞安 :後端 ,deploy
+* 葉小漓 :前端 設計home page美觀設計和資料收集
+* 游淯聖 :前端 ,後端 , database(MongoDB) 前後端架設及連結及美觀設計
+* 楊鈞安 :後端 ,deploy 後端架設和前端動畫設計
 
 
 ## web page design detail
