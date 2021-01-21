@@ -10,6 +10,7 @@ this website ideal is inspired by the movie "Social Network" the scene when Mark
 ## meta infromation
 * framework: React-Express
 * data collection: web crawling from instagram for photo and basic intro of the celebrity
+* deploy 網址： https://front-the-sexiest.herokuapp.com/
 
 ## Available Scripts
 ```
