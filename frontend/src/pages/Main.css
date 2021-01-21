@@ -13,6 +13,10 @@ header {
 
 header .logo {
   color: #fff;
+  /* background-color: rgba(34, 34, 34, 0.932);
+  padding: 5px 15px;
+  border-radius: 10px; */
+
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -33,6 +37,8 @@ header .logo {
 }
 .toggle.active {
   background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-color: rgba(34, 34, 34, 0.932);
+
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: center;

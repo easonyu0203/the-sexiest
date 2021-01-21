@@ -90,6 +90,8 @@ export default function Play() {
       ) : (
         <>
           <section className="container">
+            <h2 className="logo">SEXIEST</h2>
+
             <div className="back1"></div>
             <div
               style={
@@ -113,7 +115,7 @@ export default function Play() {
               }
               className="back2"
             ></div>
-            <div className="game-title">Who is Sexier</div>
+            <div className="game-title">Who you like the most?</div>
             <div className="card-container">
               {displayed_profiles.map((p, index) => (
                 <Card

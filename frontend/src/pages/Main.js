@@ -28,6 +28,16 @@ export default function Main() {
             </a>
           </li>
           <li>
+            <a href="#tutorial">
+              <div>Tutorial</div>
+            </a>
+          </li>
+          <li>
+            <Link to="/play">
+              <div>Play</div>
+            </Link>
+          </li>
+          <li>
             <Link to="/result">
               <div>Rank</div>
             </Link>
@@ -35,11 +45,6 @@ export default function Main() {
           <li>
             <a href="#about">
               <div>About</div>
-            </a>
-          </li>
-          <li>
-            <a href="#tutorial">
-              <div>Tutorial</div>
             </a>
           </li>
         </ul>
