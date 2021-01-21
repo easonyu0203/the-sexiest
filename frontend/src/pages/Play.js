@@ -8,6 +8,7 @@ import "./Play.css";
 import Card from "../components/Card";
 import ProgressBar from "../components/ProgressBar";
 import { urlencoded } from "body-parser";
+import { Link } from "react-router-dom";
 
 export default function Play() {
   const profiles = useRef([]);
@@ -90,7 +91,9 @@ export default function Play() {
       ) : (
         <>
           <section className="container">
-            <h2 className="logo">SEXIEST</h2>
+            <Link to="/">
+              <h2 className="logo">SEXIEST</h2>
+            </Link>
 
             <div className="back1"></div>
             <div

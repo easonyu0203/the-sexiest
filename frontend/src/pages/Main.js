@@ -11,7 +11,10 @@ export default function Main() {
   return (
     <>
       <header>
-        <h2 className="logo">Sexiest</h2>
+        <a href="#home">
+          <h2 className="logo">Sexiest</h2>
+        </a>
+
         <div
           onClick={() => setOpenMenu((pre) => !pre)}
           className={openMenu ? "toggle active" : "toggle"}

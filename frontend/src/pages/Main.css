@@ -21,6 +21,10 @@ header .logo {
   cursor: pointer;
 }
 
+header a {
+  text-decoration: none;
+}
+
 .toggle {
   position: relative;
   right: 0px;

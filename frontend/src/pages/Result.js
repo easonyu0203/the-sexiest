@@ -48,7 +48,10 @@ export default function Result() {
     <>
       <div className="nav-in-container">
         <header>
-          <h2 className="logo">Sexiest</h2>
+          <Link to="/">
+            <h2 className="logo">Sexiest</h2>
+          </Link>
+
           <div
             onClick={() => setOpenMenu((pre) => !pre)}
             className={openMenu ? "toggle active" : "toggle"}
