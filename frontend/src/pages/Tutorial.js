@@ -21,7 +21,9 @@ export default function Tutorial() {
           </div>
           <div
             onClick={() => setClickContinue(true)}
-            className="tutor-continue-btn"
+            className={
+              "tutor-continue-btn " + (clickContinue ? "m-fadeOut" : "")
+            }
           >
             Continue
           </div>

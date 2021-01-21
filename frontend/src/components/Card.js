@@ -3,6 +3,7 @@ import "./Card.css";
 
 export default function Card(props) {
   const { name, title, intro, ig_link, ig_followers, picture, onClick } = props;
+  console.log(props);
   return (
     <>
       <div className="card">

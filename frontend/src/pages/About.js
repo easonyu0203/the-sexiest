@@ -7,6 +7,7 @@ export default function About() {
     <>
       <section id="about" className="about-container">
         <div className="introduction">
+          <div className="intro-cover"></div>
           <div className="intro-text">
             <h1>What is this?</h1>
             <p>

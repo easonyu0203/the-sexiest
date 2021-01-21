@@ -10,7 +10,7 @@ export default () => {
   useEffect(async () => {
     const res = await axios.get("http://localhost:5000/api/profile/top/10");
     setProfiles(res.data);
-    setDisplayed_profile(res.data[0]);
+    setDisplayed_profile({ ...res.data[0] });
   }, []);
   return (
     <>
@@ -33,14 +33,20 @@ export default () => {
         <div className="rank-list">
           {profiles.map((p, i) => (
             <RankCard
+              key={i}
               onClick={(i) => {
-                setDisplayed_profile(profiles[i]);
+                console.log(profiles[i]);
+                setDisplayed_profile(() => {
+                  return { ...profiles[i] };
+                });
               }}
               rank={i + 1}
               rate={p.rate}
               name={p.name}
               title={p.title}
               img_url={p.pictures[0]}
+              ig_follwers={p.ig_follwers}
+              ig_link={p.ig_link}
             />
           ))}
         </div>
