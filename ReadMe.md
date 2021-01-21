@@ -4,7 +4,8 @@
 design a web site that let user choose who the sexiest celebrity. Kinda like a mini game. after playing it will display the result that gather from all the users and the sexiest celebrity that majority user think.
 
 ## design ideal
-this website ideal is inspired by the movie Social Network the scene when Mark Zuckerberg design a website that rank all the girls in dorm, since it is too immortal to rank average people, we only rank celebrities, it still a little bit immortal but since celebrities is always judge by everyone and it fun to know majority of people think, we decide to do this project.
+this website ideal is inspired by the movie "Social Network" the scene when Mark Zuckerberg design a website that rank all the girls in dorm, since it is too immortal to rank average people, we only rank celebrities, it still a little bit immortal but since celebrities is always judge by everyone and it fun to know majority of people think, we decide to do this project.
+
 
 ## meta infromation
 * framework: React-Express
@@ -20,10 +21,20 @@ yarn server
 ```
 Runs backend server in development mode.
 
+## 組員貢獻:
+* 葉小漓 :前端
+* 游淯聖 :前端 ,後端 , database(MongoDB)
+* 楊鈞安 :後端 ,deploy
+
 
 ## web page design detail
 ### Home page
 when user first go to this site. we first intro about the site and instruct them how to play.(the instruction should be simple)
+
+### About page
+introduction of the page and what inspirate us to make this website.
+### Tutorial page
+little demo who the game play
 #### site component
 * introduction of website
 * button to start playing
@@ -39,8 +50,3 @@ pages let the user play the game
 ### Result page
 display the result of ranking of sexiest celebrity which gather from all users playing result
 
-### Add celebrity page(optional)
-after display result, maybe some users think the sexiest celebrity is not in our database, let user have ability to input a celebrity to our database.
-
-### Donate page (optional)
-contribution site let user can donate money.
