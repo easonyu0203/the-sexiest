@@ -37,23 +37,6 @@ export default function Home() {
             <div className="home-guide-btn">guide</div>
           </a>
         </div>
-        <ul className="social">
-          <li>
-            <a href="">
-              <img src="https://i.ibb.co/x7P24fL/facebook.png" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="https://i.ibb.co/Wnxq2Nq/twitter.png" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="https://i.ibb.co/ySwtH4B/instagram.png" />
-            </a>
-          </li>
-        </ul>
       </section>
       <div className="menu">
         <ul>

@@ -24,7 +24,7 @@
   overflow: hidden;
   clip-path: ellipse(150px 200px at 10% 5%);
 }
-.rank-card-containe .img-container img {
+.img-container img {
   width: 100%;
   overflow: hidden;
   border-radius: 0em;
