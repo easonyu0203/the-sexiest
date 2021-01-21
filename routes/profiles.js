@@ -94,8 +94,14 @@ router.patch("/:name", async (req, res) => {
   if (req.body.ig_link) {
     update["ig_link"] = req.body.ig_link;
   }
+  if (req.body.fb_link) {
+    update["fb_link"] = req.body.fb_link;
+  }
+  if (req.body.tw_link) {
+    update["tw_link"] = req.body.tw_link;
+  }
   if (req.body.pictures) {
-    update["pictures"] = req.body.pictures;
+    update["pictures"] = t["pictures"].concat(req.body.pictures);
   }
   if (req.body.showCnt) {
     update["showCnt"] = req.body.showCnt + t["showCnt"];
