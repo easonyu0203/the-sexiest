@@ -5,20 +5,9 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 
 export default function Home() {
-  const [openMenu, setOpenMenu] = useState(false);
-
   return (
     <>
-      <section id="home" className={`showcase ` + (openMenu ? "active" : "")}>
-        <header>
-          <h2 className="logo">Sexiest</h2>
-          <div
-            onClick={() => {
-              setOpenMenu((pre) => !pre);
-            }}
-            className={`toggle ` + (openMenu ? "active" : "")}
-          ></div>
-        </header>
+      <section id="home" className="showcase ">
         <video
           src={process.env.PUBLIC_URL + "home.mp4"}
           muted
@@ -38,35 +27,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <div className="menu">
-        <ul>
-          <li>
-            <Link to="/">
-              <div>Home</div>
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <div>News</div>
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <div>Destination</div>
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <div>Blog</div>
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <div>Contact</div>
-            </Link>
-          </li>
-        </ul>
-      </div>
     </>
   );
 }
