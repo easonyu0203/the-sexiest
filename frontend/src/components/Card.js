@@ -2,13 +2,24 @@ import React from "react";
 import "./Card.css";
 
 export default function Card(props) {
-  const { name, title, intro, ig_link, ig_followers, picture, onClick } = props;
-  console.log(props);
+  const {
+    name,
+    title,
+    intro,
+    ig_link,
+    ig_followers,
+    picture,
+    onClick,
+    onIn,
+    onOut,
+  } = props;
   return (
     <>
       <div className="card">
         <div
           onClick={() => (onClick ? onClick(name) : "")}
+          onMouseOver={onIn}
+          onMouseOut={onOut}
           className="card-image"
         >
           <img src={picture} alt=""></img>

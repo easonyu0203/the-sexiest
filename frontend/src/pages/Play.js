@@ -7,12 +7,17 @@ import "./Play.css";
 
 import Card from "../components/Card";
 import ProgressBar from "../components/ProgressBar";
+import { urlencoded } from "body-parser";
 
 export default function Play() {
   const profiles = useRef([]);
   const [displayed_profiles, setDisplayed_profiles] = useState([]);
   const [round, setRound] = useState(1);
   const [end, setEnd] = useState(false);
+  const [back_img1, setBack_img1] = useState("");
+  const [show_back_img1, setShow_back_img1] = useState(false);
+  const [back_img2, setBack_img2] = useState("");
+  const [show_back_img2, setShow_back_img2] = useState(false);
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/profile/random/11").then((res) => {
@@ -26,6 +31,8 @@ export default function Play() {
       _displayed_profiles.push(profiles.current[0]);
       _displayed_profiles.push(profiles.current[1]);
       setDisplayed_profiles(_displayed_profiles);
+      setBack_img1(_displayed_profiles[0].pictures[0]);
+      setBack_img2(_displayed_profiles[1].pictures[0]);
     });
   }, []);
 
@@ -50,6 +57,9 @@ export default function Play() {
         _displayed_profiles.push(profiles.current[round + 1]);
       }
       setDisplayed_profiles(_displayed_profiles);
+      console.log(_displayed_profiles);
+      setBack_img1(_displayed_profiles[0].pictures[0]);
+      setBack_img2(_displayed_profiles[1].pictures[0]);
     } else {
       // game over
       const ps = [];
@@ -80,10 +90,43 @@ export default function Play() {
       ) : (
         <>
           <section className="container">
+            <div className="back1"></div>
+            <div
+              style={
+                back_img1
+                  ? {
+                      backgroundImage: `url(${back_img1})`,
+                      opacity: show_back_img1 ? 1 : 0,
+                    }
+                  : {}
+              }
+              className="back2"
+            ></div>
+            <div
+              style={
+                back_img2
+                  ? {
+                      backgroundImage: `url(${back_img2})`,
+                      opacity: show_back_img2 ? 1 : 0,
+                    }
+                  : {}
+              }
+              className="back2"
+            ></div>
             <div className="game-title">Who is Sexier</div>
             <div className="card-container">
               {displayed_profiles.map((p, index) => (
                 <Card
+                  onIn={() => {
+                    index === 0
+                      ? setShow_back_img1(true)
+                      : setShow_back_img2(true);
+                  }}
+                  onOut={() => {
+                    index === 0
+                      ? setShow_back_img1(false)
+                      : setShow_back_img2(false);
+                  }}
                   key={index}
                   name={p.name}
                   title={p.title}
