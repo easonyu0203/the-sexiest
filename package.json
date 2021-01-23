@@ -4,8 +4,8 @@
   "description": "web programming 2020 final project",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon server.js",
-    "start": "cd frontend && yarn start"
+	  "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",

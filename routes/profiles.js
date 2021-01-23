@@ -100,6 +100,9 @@ router.patch("/:name", async (req, res) => {
   if (req.body.tw_link) {
     update["tw_link"] = req.body.tw_link;
   }
+  if (req.body.detail_intro) {
+    update["detail_intro"] = req.body.detail_intro;
+  }
   if (req.body.pictures) {
     update["pictures"] = t["pictures"].concat(req.body.pictures);
   }

@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 require("dotenv/config");
@@ -15,8 +16,10 @@ const PORT = 5000;
 
 app.use("/api/profile", profilesRoute);
 
-app.get("/", (req, res) => {
-  res.send("this is home");
+app.use(express.static(path.join(__dirname, "frontend", "build")));
+
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
 });
 
 mongoose.connect(
